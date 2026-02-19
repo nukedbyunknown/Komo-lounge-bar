@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="sq">
 <head>
@@ -133,10 +132,15 @@
             margin-bottom: 3rem;
         }
 
-        .btn-main {
-            padding: 1.2rem 3rem;
-            background: var(--accent);
-            color: white;
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-main, .btn-secondary {
+            padding: 1.2rem 2.5rem;
             text-decoration: none;
             font-weight: 700;
             letter-spacing: 2px;
@@ -147,10 +151,27 @@
             display: inline-block;
         }
 
+        .btn-main {
+            background: var(--accent);
+            color: white;
+        }
+
         .btn-main:hover {
             background: white;
             color: black;
-            transform: scale(1.05);
+            transform: translateY(-5px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            transform: translateY(-5px);
         }
 
         /* Menu Section */
@@ -284,6 +305,8 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero-content h1 { font-size: 3.5rem; }
+            .cta-group { flex-direction: column; align-items: center; }
+            .btn-main, .btn-secondary { width: 100%; max-width: 300px; }
         }
     </style>
 </head>
@@ -307,7 +330,10 @@
         <div class="hero-content">
             <p>Premium Lounge Experience</p>
             <h1>KOMO LOUNGE</h1>
-            <a href="#menu" class="btn-main">View Menu</a>
+            <div class="cta-group">
+                <a href="#menu" class="btn-main">View Menu</a>
+                <a href="https://nukedbyunknown.github.io/Sharri-Resturant/" target="_blank" class="btn-secondary">Vizito Sharri-Resturant</a>
+            </div>
         </div>
     </section>
 
@@ -423,6 +449,7 @@
             <div class="footer-info">
                 <div class="footer-logo">KOMO<span>.</span></div>
                 <p>Destinacioni juaj për mbrëmje të paharrueshme dhe kafe të shijshme në zemër të qytetit.</p>
+                <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--accent);">Partner me Sharri Restaurant</p>
                 <div class="social-links">
                     <a href="https://www.facebook.com/sharricenter" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/sharri_center/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -434,11 +461,12 @@
                 <p><i class="fas fa-map-marker-alt"></i> Komoran-Glogovc, Rruga Nazmi Gashi</p>
                 <p><i class="fas fa-phone"></i> 048 589 002</p>
                 <p><i class="fas fa-clock"></i> Mon - Sun: 08:00 - 00:00</p>
+                <a href="https://nukedbyunknown.github.io/Sharri-Resturant/" target="_blank" style="color: var(--accent); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; margin-top: 1rem; display: inline-block; border-bottom: 1px solid var(--accent);">VIZITO SHARRI RESTAURANT &rarr;</a>
             </div>
         </div>
         
         <div class="bottom-bar">
-            &copy; 2026 KOMO LOUNGE BAR. ALL RIGHTS RESERVED.
+            &copy; 2025 KOMO LOUNGE BAR. ALL RIGHTS RESERVED.
         </div>
     </footer>
 
@@ -476,4 +504,3 @@
     </script>
 </body>
 </html>
-```
